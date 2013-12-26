@@ -6,17 +6,25 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
 </head>
 <body>
-<div class="container">
-    <div class="index">
+<div class="row">
+    <div class="col-md-3" style="min-height:600px;background-color: #EEEEEE">
+        <form class="form-inline" >
+            <div class="form-group">
+                <label class="sr-only" for="searchtxt">Email address</label>
+                <input type="text" class="form-control" id="searchtxt" placeholder="Enter text press search">
+            </div>&nbsp;&nbsp;
+             <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+
         <ul>
             <li>Test item</li>
             <li>Test item</li>
         </ul>
     </div>
-    <div class="bodyfield">
+    <div class="col-md-9">
         <p>Item no 1</p>
     </div>
-    </div>
+</div>
 </div>
 </body>
 </html>

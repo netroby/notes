@@ -2,8 +2,15 @@
 <html>
 <head>
     <title>Add note</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="ueditor/editor_config.js"></script>
+    <script type="text/javascript" src="ueditor/editor_all.js"></script>
 </head>
 <body>
-
+<textarea name="content" id="myEditor"></textarea>
+<script type="text/javascript">
+    var editor = new UE.ui.Editor();
+    editor.render("myEditor");
+</script>
 </body>
 </html>

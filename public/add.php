@@ -5,4 +5,7 @@ if (!isset($_SESSION['admin_user'])) {
     exit();
 }
 
+if (isset($_GET['act']) && $_GET['act'] == 'save') {
+
+}
 include '../template/add.html';

@@ -3,8 +3,10 @@ $config = array();
 $config['username'] = 'admin';
 $config['password'] = 'password';
 $config['db'] = array(
-    'host' => '127.0.0.1',
+    'host' => 'localhost',
     'port' => '3306',
+    'dbname' => 'note_acmu',
+    'charset' => 'utf8',
     'user' => 'root',
     'password' => ''
 );

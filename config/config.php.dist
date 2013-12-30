@@ -1,0 +1,4 @@
+<?php
+$config = array();
+$config['username'] = 'admin';
+$config['password'] = 'password';

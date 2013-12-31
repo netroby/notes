@@ -17,8 +17,13 @@
         </form>
 
         <ul>
-            <li>Test item</li>
-            <li>Test item</li>
+            <?php
+            if (isset($notes) && count($notes) > 0) {
+            foreach ($notes as $note) {
+               echo '<li>'.htmlspecialchars(strip_tags($note["content"])).'</li>';
+            }
+            }
+            ?>
         </ul>
     </div>
     <div class="col-md-9">

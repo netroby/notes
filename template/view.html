@@ -1,2 +1,20 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Note</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <?php
      echo $note['content']; ?>
+</div>
+
+<div class="container">
+    <div style="font-size:smaller;color:gray">Publish at: <?php echo $note['addtime']; ?> <a
+            href="delete.php?id=<?php echo $note['id']; ?>">Delete</a></div>
+</div>
+</body>
+
+</html>

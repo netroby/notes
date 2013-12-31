@@ -1,6 +1,4 @@
-Note 
-##########
+notes
+=====
 
-
-#. A note web app
-#. Save your memory easily and boost
+notes software by AncientRockLab with MySQL and PHP

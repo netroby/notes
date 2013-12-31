@@ -8,19 +8,23 @@
 <body>
 <div class="row">
     <div class="col-md-3" style="min-height:600px;background-color: #EEEEEE">
-        <form class="form-inline" style="margin:6px" >
+        <form class="form-inline" style="margin:6px">
             <div class="form-group">
                 <label class="sr-only" for="searchtxt">Email address</label>
                 <input type="text" class="form-control" id="searchtxt" placeholder="Enter text press search">
-            </div>&nbsp;&nbsp;
-             <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+            &nbsp;&nbsp;
+            <button type="submit" class="btn btn-primary">Search</button>
         </form>
 
         <ul>
             <?php
             if (isset($notes) && count($notes) > 0) {
             foreach ($notes as $note) {
-               echo '<li><a href="view.php?id='.$note['id'].'" target="viewnote">'.htmlspecialchars(strip_tags($note["content"])).'</a></li>';
+            echo '
+            <li><a href="view.php?id='.$note['id'].'" target="viewnote">'.htmlspecialchars(strip_tags($note["content"])).'</a>
+            </li>
+            ';
             }
             }
             ?>
@@ -28,7 +32,7 @@
     </div>
     <div class="col-md-9">
         <div style="float:right;margin:6px"><a href="add.php" target="viewnote" class="btn btn-success">新建日志</a></div>
-       <iframe name="viewnote" style="width:100%;min-height:550px;border:0px;" src="view.php"></iframe>
+        <iframe name="viewnote" style="width:100%;min-height:550px;border:0px;" src="view.php"></iframe>
     </div>
 </div>
 </div>

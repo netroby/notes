@@ -25,7 +25,7 @@ if (isset($_GET['act']) && $_GET['act'] == 'save') {
             $addtime = null;
 
         }
-        echo "Success add note";
+        echo "Success add note, <a href=\"javascript:top.location='list.php'\">Ok</a>";
         exit();
     } catch (PDOException $e) {
         print "Error!: " . $e->getMessage() . "<br/>";

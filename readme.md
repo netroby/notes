@@ -47,3 +47,5 @@ so i made this software, we need free control our knowledge and our memory.
 
 hope this software will help you all.
 
+Thanks for watching me
+

@@ -11,15 +11,12 @@ if (isset($_GET['act']) && $_GET['act'] == 'save') {
         if (isset($_POST['content'])) {
 
             include '../config/config.php';
-            $mysql_server = sprintf("mysql:host=%s;dbname=%s", $config['db']['host'], $config['db']['dbname']);
-            $charset_info = sprintf("SET NAMES %s", $config['db']['charset']);
-            $dbh = new PDO($mysql_server, $config['db']['user'], $config['db']['password'], array(
-                PDO::MYSQL_ATTR_INIT_COMMAND => $charset_info
-            ));
+            include '../vendor/Acmu/Db.php';
+            $db = Acmu\Db::getInstance($config);
             $mysql_server = null;
             $charset_info = null;
             $addtime = date('Y-m-d H:i:s', time());
-            $stmt = $dbh->prepare('insert into notes set content = :content, addtime = :addtime;');
+            $stmt = $db->prepare('insert into notes set content = :content, addtime = :addtime;');
             $stmt->bindParam(":content", cleanHtml($_POST['content']));
             $stmt->bindParam(":addtime", $addtime);
             $stmt->execute();
@@ -28,7 +25,7 @@ if (isset($_GET['act']) && $_GET['act'] == 'save') {
             $addtime = null;
 
         }
-        echo "Success add note";
+        echo "Success add note, <a href=\"javascript:top.location='list.php'\">Ok</a>";
         exit();
     } catch (PDOException $e) {
         print "Error!: " . $e->getMessage() . "<br/>";

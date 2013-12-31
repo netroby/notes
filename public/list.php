@@ -6,7 +6,7 @@ if (!isset($_SESSION['admin_user'])) {
     include '../config/config.php';
     include '../vendor/Acmu/Db.php';
     $db = Acmu\Db::getInstance($config); 
-    $stmt = $db->prepare("select id, left(content, 128) as content from notes where is_delete is null or is_delete = '0' order by id desc limit 100 ;");
+    $stmt = $db->prepare("select id, title,left(content, 256) as content from notes where is_delete is null or is_delete = '0' order by id desc limit 100 ;");
     $stmt->execute();
     $notes = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $db = null; 

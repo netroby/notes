@@ -22,16 +22,17 @@
             if (isset($notes) && count($notes) > 0) {
             foreach ($notes as $note) {
             echo '
-            <li><a href="view.php?id='.$note['id'].'" target="viewnote">'.htmlspecialchars(strip_tags($note["content"])).'</a>
-            </li>
-            ';
+            <li><a href="view.php?id='.$note['id'].'" target="viewnote">';
+                echo '<span style="font-weight: bold">'.htmlspecialchars(strip_tags($note["title"])).'</span>';
+                echo '</a><p style="font-size:smaller;color:gray">'.mb_substr(htmlspecialchars(strip_tags($note["content"])), 0, 64, 'UTF-8').'</p></li>';
             }
             }
             ?>
         </ul>
     </div>
     <div class="col-md-9">
-        <div style="float:right;margin:6px"><a href="add.php" target="viewnote" class="btn btn-success">New Note</a></div>
+        <div style="float:right;margin:6px"><a href="add.php" target="viewnote" class="btn btn-success">New Note</a>
+        </div>
         <iframe name="viewnote" style="width:100%;min-height:550px;border:0px;" src="view.php"></iframe>
     </div>
 </div>

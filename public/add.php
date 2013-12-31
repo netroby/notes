@@ -16,8 +16,11 @@ if (isset($_GET['act']) && $_GET['act'] == 'save') {
             $mysql_server = null;
             $charset_info = null;
             $addtime = date('Y-m-d H:i:s', time());
-            $stmt = $db->prepare('insert into notes set content = :content, addtime = :addtime;');
-            $stmt->bindParam(":content", cleanHtml($_POST['content']));
+            $stmt = $db->prepare('insert into notes set title=:title,content = :content, addtime = :addtime;');
+            $title = cleanHtml($_POST['title']);
+            $content = cleanHtml($_POST['content']);
+            $stmt->bindParam(":title", $title);
+            $stmt->bindParam(":content", $content);
             $stmt->bindParam(":addtime", $addtime);
             $stmt->execute();
 

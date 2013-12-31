@@ -11,7 +11,7 @@ if (!isset($_SESSION['admin_user'])) {
         $mysql_server = null;
         $charset_info = null;
         $addtime = date('Y-m-d H:i:s', time());
-        $stmt = $db->prepare('select id, content, addtime from notes where id = :id limit 1;');
+        $stmt = $db->prepare('select id, title, content, addtime from notes where id = :id limit 1;');
         $stmt->bindParam(':id', $id);
         $stmt->execute();
         $note = $stmt->fetch(PDO::FETCH_ASSOC);

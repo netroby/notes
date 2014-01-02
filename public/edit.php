@@ -29,7 +29,11 @@ if (isset($_GET['act']) && $_GET['act'] == 'save') {
             $content = null;
 
         }
-        echo "Success add note, <a href=\"javascript:top.location='list.php'\">Ok</a>";
+        $msg = "Success add note, "
+            . "<script>var redirectUrl='view.php?id=".$id."';"
+            . "countDown(selfRedirect(redirectUrl), 5000);</script>"
+            . "<a href=\"javascript:selfRedirect(redirectUrl);\">Ok</a>";
+        include '../template/msg.html';
         exit();
     } catch (PDOException $e) {
         print "Error!: " . $e->getMessage() . "<br/>";

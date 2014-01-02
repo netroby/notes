@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+</head>
+<body>
+<script type="text/javascript">
+    function selfRedirect(url) {
+        return self.location = url;
+    }
+    function topRedirect(url) {
+        return top.location = url;
+    }
+    function countDown(obj, times) {
+        setTimeout(obj, times);
+    }
+</script>
+<?php echo $msg; ?>
+
+</body>
+</html>

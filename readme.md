@@ -1,5 +1,10 @@
 notes software by AncientRockLab with MySQL and PHP
 
+preview
+--------
+
+![Preview1](http://ancientrock.github.io/notes/public/static/images/preview1.png "Preview1")
+
 install
 --------
 

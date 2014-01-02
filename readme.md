@@ -17,7 +17,7 @@ install
 
    then change the value of the configure sections.
 
-3. configure the webserver to serv the notes software
+3. configure the webserver to serv the notes software, you may reference `install/notes.conf`
 
 4. have fun
 

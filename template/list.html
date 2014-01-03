@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="row">
-    <div class="col-md-3" style="min-height:600px;background-color: #EEEEEE">
+    <div class="col-md-3" id="left-nav" style="min-height:600px;background-color: #EEEEEE">
         <form class="form-inline" style="margin:6px">
             <div class="form-group">
                 <label class="sr-only" for="searchtxt">Email address</label>
@@ -41,11 +41,13 @@
     $(function(){
         var height = window.innerHeight;
         $('#viewnote').css('height', height);
+        $('#left-nav').css('height', height);
     });
 
     $(window).resize(function(){
         var height = window.innerHeight;
         $('#viewnote').css('height', height);
+        $('#left-nav').css('height', height);
     });
 </script>
 

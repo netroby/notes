@@ -7,8 +7,8 @@
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 <body>
-<div class="row">
-    <div class="col-md-3" style="min-height:600px;background-color: #EEEEEE">
+<div class="container" style="width:100%;padding: 0px">
+    <div class="col-md-3" id="left-nav" style="overflow:auto;background-color: #EEEEEE">
         <form class="form-inline" style="margin:6px">
             <div class="form-group">
                 <label class="sr-only" for="searchtxt">Email address</label>
@@ -31,21 +31,23 @@
             ?>
         </ul>
     </div>
-    <div class="col-md-9">
-        <div style="float:right;margin:6px 12px"><a href="add.php" target="viewnote" class="btn btn-success">New Note</a>
+    <div class="col-md-9" style="padding-right: 0px">
+        <div style="right:20px;top:10px;position:absolute;z-index:999"><a href="add.php" target="viewnote" class="btn btn-success">New Note</a>
         </div>
-        <iframe id="viewnote" name="viewnote" style="width:100%;min-height:650px;border:0px;" src="view.php"></iframe>
+        <iframe id="viewnote" name="viewnote" style="width:100%;border:0px;" src="view.php"></iframe>
     </div>
 </div>
 <script type="text/javascript">
     $(function(){
-        var height = window.innerHeight;
+        var height = window.innerHeight-6;
         $('#viewnote').css('height', height);
+        $('#left-nav').css('height', height);
     });
 
     $(window).resize(function(){
-        var height = window.innerHeight;
+        var height = window.innerHeight-6;
         $('#viewnote').css('height', height);
+        $('#left-nav').css('height', height);
     });
 </script>
 

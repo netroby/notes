@@ -5,10 +5,14 @@ if (!isset($_SESSION['admin_user'])) {
 } else {
     include '../config/config.php';
     include '../vendor/Acmu/Db.php';
-    $db = Acmu\Db::getInstance($config); 
+    $db = Acmu\Db::getInstance($config);
     $stmt = $db->prepare("select id, title,left(content, 256) as content from notes where is_delete is null or is_delete = '0' order by id desc limit 100 ;");
     $stmt->execute();
     $notes = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $db = null; 
-    include '../template/list.html';
+    $db = null;
+    if (stristr($_SERVER['HTTP_USER_AGENT'], 'android') || stristr($_SERVER['HTTP_USER_AGENT'], 'iphone')) {
+        include '../template/list-mobile.html';
+    } else {
+        include '../template/list.html';
+    }
 }

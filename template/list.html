@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Note</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="shortcut icon" href="/favicon.ico">
     <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -24,7 +26,7 @@
             if (isset($notes) && count($notes) > 0) {
             foreach ($notes as $note) {
             echo '
-            <li class="note-item-li"><a href="view.php?id='.$note['id'].'" target="viewnote">';
+            <li class="note-item-li"><a href="view.php?id='.$note['id'].'" >';
                 echo '<span style="font-weight: bold">'.htmlspecialchars(strip_tags($note["title"])).'</span>';
                 echo '</a><p style="font-size:smaller;color:gray">'.mb_substr(htmlspecialchars(strip_tags($note["content"])), 0, 64, 'UTF-8').'</p></li>';
             }
@@ -43,8 +45,12 @@
         var width= window.innerWidth;
         if (width < 800) {
             $('.note-item-li a').each(function() {
-                $(this).attr('target', '_blank').attr('style', 'target-new:tab');
+                $(this).removeAttr('target').attr('style', 'target-new:tab');
             })
+        } else {
+            $('.note-item-li a').each(function() {
+                $(this).attr('target', "viewnote");
+            });
         }
         var height = window.innerHeight-6;
         $('#viewnote').css('height', height);

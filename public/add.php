@@ -35,7 +35,11 @@ if (isset($_GET['act']) && $_GET['act'] == 'save') {
         die();
     }
 } else {
-    include '../template/add.html';
+    if (stristr($_SERVER['HTTP_USER_AGENT'], 'android') || stristr($_SERVER['HTTP_USER_AGENT'], 'iphone')) {
+        include '../template/add-mobile.html';
+    } else {
+        include '../template/add.html';
+    }
 }
 
 

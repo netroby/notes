@@ -51,7 +51,11 @@ if (isset($_GET['act']) && $_GET['act'] == 'save') {
         $stmt->execute();
         $note = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        include '../template/edit.html';
+        if (stristr($_SERVER['HTTP_USER_AGENT'], 'android') || stristr($_SERVER['HTTP_USER_AGENT'], 'iphone')) {
+            include '../template/edit-mobile.html';
+        } else {
+            include '../template/edit.html';
+        }
     } else {
         header('location:add.php');
     }

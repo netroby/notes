@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body>
+<div class="container">
+    <h1><?php echo $note['title']; ?></h1>
+
+    <div class="content"><?php
+     echo $note['content']; ?></div>
+
+</div>
+
+<div class="container">
+    <div style="font-size:smaller;color:gray">Publish at: <?php echo $note['addtime']; ?> <a
+            href="delete.php?id=<?php echo $note['id']; ?>">Delete</a>
+    <a href="edit.php?id=<?php echo $note['id']; ?>" class="btn btn-primary">Edit</a>
+    </div>
+</div>
+</body>
+
+</html>

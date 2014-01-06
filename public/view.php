@@ -16,8 +16,11 @@ if (!isset($_SESSION['admin_user'])) {
         $stmt->execute();
         $note = $stmt->fetch(PDO::FETCH_ASSOC);
         $dbh = null;
-        $addtime = null;
-        include '../template/view.html';
+        $addtime = null;if (stristr($_SERVER['HTTP_USER_AGENT'], 'android') || stristr($_SERVER['HTTP_USER_AGENT'], 'iphone')) {
+            include '../template/view-mobile.html';
+        } else {
+            include '../template/view.html';
+        }
     } else {
         echo "Click left item to show notes";
     }

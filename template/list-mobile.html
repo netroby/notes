@@ -10,20 +10,25 @@
 </head>
 <body>
 <div class="container">
- <h1>Notes</h1>
-        <ul id="note-item-list">
-            <?php
+    <h1>Notes</h1>
+
+    <p><a href="add.php">+Add note</a></p>
+    <ul id="note-item-list">
+        <?php
             if (isset($notes) && count($notes) > 0) {
-            foreach ($notes as $note) {
-            echo '
-            <li class="note-item-li"><a href="view.php?id='.$note['id'].'" >';
-                echo '<span style="font-weight: bold">'.htmlspecialchars(strip_tags($note["title"])).'</span>';
-                echo '</a></li>';
-            }
-            }
-            ?>
-        </ul>
-    </div>
+        foreach ($notes as $note) {
+        echo '
+        <li class="note-item-li"><a href="view.php?id='.$note['id'].'">';
+            echo '<span style="font-weight: bold">'.htmlspecialchars(strip_tags($note["title"])).'</span>';
+            echo '</a></li>
+        ';
+        }
+        }
+        ?>
+    </ul>
+
+    <p><a href="add.php">+Add note</a></p>
+</div>
 
 </div>
 

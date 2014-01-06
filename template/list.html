@@ -19,12 +19,12 @@
             <button type="submit" class="btn btn-primary">Search</button>
         </form>
 
-        <ul>
+        <ul id="note-item-list">
             <?php
             if (isset($notes) && count($notes) > 0) {
             foreach ($notes as $note) {
             echo '
-            <li><a href="view.php?id='.$note['id'].'" target="viewnote">';
+            <li class="note-item-li"><a href="view.php?id='.$note['id'].'" target="viewnote">';
                 echo '<span style="font-weight: bold">'.htmlspecialchars(strip_tags($note["title"])).'</span>';
                 echo '</a><p style="font-size:smaller;color:gray">'.mb_substr(htmlspecialchars(strip_tags($note["content"])), 0, 64, 'UTF-8').'</p></li>';
             }
@@ -40,6 +40,12 @@
 </div>
 <script type="text/javascript">
     $(function(){
+        var width= window.innerWidth;
+        if (width < 800) {
+            $('.note-item-li a').each(function() {
+                $(this).attr('target', '_blank').attr('style', 'target-new:tab');
+            })
+        }
         var height = window.innerHeight-6;
         $('#viewnote').css('height', height);
         $('#left-nav').css('height', height);

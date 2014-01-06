@@ -18,11 +18,12 @@
 </div>
 
 <div class="container">
-    <div style="font-size:smaller;color:gray">Publish at: <?php echo $note['addtime']; ?> <a
-            href="delete.php?id=<?php echo $note['id']; ?>">Delete</a>
-    <a href="edit.php?id=<?php echo $note['id']; ?>" >Edit</a>
+    <div style="font-size:smaller;color:gray">Publish at: <?php echo $note['addtime']; ?> &nbsp;&nbsp;
+        <a href="edit.php?id=<?php echo $note['id']; ?>">Edit</a>
         Or <a href="list.php">Back to home</a>&nbsp;&nbsp;
-        <a href="add.php">Add note</a>
+        <a href="add.php">+Add note</a> <br/>
+        <a
+                href="delete.php?id=<?php echo $note['id']; ?>">Delete</a> (Attention!)
     </div>
 </div>
 </body>

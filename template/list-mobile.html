@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Note</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="shortcut icon" href="/favicon.ico">
+<meta charset="UTF-8">
+<title>Note</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+<link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
 <div class="container">
-    <h1>Notes</h1>
+	<h1>Notes</h1>
 
-    <p><a href="add.php">+Add note</a></p>
-    <ul id="note-item-list">
-        <?php
-            if (isset($notes) && count($notes) > 0) {
-        foreach ($notes as $note) {
-        echo '
-        <li class="note-item-li"><a href="view.php?id='.$note['id'].'">';
-            echo '<span style="font-weight: bold">'.htmlspecialchars(strip_tags($note["title"])).'</span>';
-            echo '</a></li>
-        ';
-        }
-        }
-        ?>
-    </ul>
+	<p><a href="add.php">+Add note</a></p>
+	<ul id="note-item-list">
+		<?php
+		if (isset($notes) && count($notes) > 0) {
+		foreach ($notes as $note) {
+		echo '<li class="note-item-li"><a href="view.php?id='.$note['id'].'">';
+			echo htmlspecialchars(strip_tags($note["title"]));
+			echo '</a></li>';
+		}
+		}
+		?>
+	</ul>
 
-    <p><a href="add.php">+Add note</a></p>
+	<p><a href="add.php">+Add note</a></p>
 </div>
 
 </div>

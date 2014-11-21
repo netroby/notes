@@ -1,23 +1,27 @@
-notes software by AncientRockLab with MySQL and PHP
+notes webapps with MySQL and PHP
 
 preview
 --------
 
-![Preview1](http://ancientrock.github.io/notes/public/static/images/preview1.png "Preview1")
+![Preview1](http://netroby.github.io/notes/public/static/images/preview1.png "Preview1")
 
 install
 --------
 
-1. import the sql file
+1. import the sql file using phpmyadmin or mysql client
+
 
     using mysql client connect to your mysql server , import the notes.sql
 
-2. rename config/config.php.dist
+
+2. rename config/config.php.dist to config/config.php
 
 
    then change the value of the configure sections.
 
+
 3. configure the webserver to serv the notes software, you may reference `install/notes.conf`
+
 
 4. have fun
 
@@ -51,3 +55,7 @@ hope this software will help you all.
 
 Thanks for watching me
 
+author
+-------
+
+ZhiFeng Hu <netroby>

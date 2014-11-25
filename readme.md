@@ -40,7 +40,8 @@ This software was released under MIT license, totally free and opensource.
 
 Welcome you join us to improve the quality of this software.
 
-see license information please read LICENSE
+see license information please read [LICENSE](LICENSE)
+
 
 goals
 ---------

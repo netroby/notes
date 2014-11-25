@@ -59,4 +59,4 @@ Thanks for watching me
 author
 -------
 
-ZhiFeng Hu <netroby>
+ZhiFeng Hu [netroby]

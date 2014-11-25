@@ -1,11 +1,11 @@
 notes webapps with MySQL and PHP
 
-preview
+Preview
 --------
 
 ![Preview1](http://netroby.github.io/notes/public/static/images/preview1.png "Preview1")
 
-install
+Install
 --------
 
 1. import the sql file using phpmyadmin or mysql client
@@ -26,14 +26,14 @@ install
 4. have fun
 
 
-requirement
+Requirement
 -----------
 
-1. PHP 5.3.8+
-2. MySQL 5.1+
-3. Webserver(nginx or apache)
+1. PHP 5.6+ (PDO_MySQL, CURL with OpenSSL, MbString, MCrypt)
+2. MySQL 5.6+
+3. nginx 1.6+ (Tengine may be ok)
 
-license
+License
 ----------
 
 This software was released under MIT license, totally free and opensource.
@@ -43,7 +43,7 @@ Welcome you join us to improve the quality of this software.
 see license information please read [LICENSE](LICENSE)
 
 
-goals
+Goals
 ---------
 
 we want to be free from locked by evernote, youdao note.
@@ -56,7 +56,7 @@ hope this software will help you all.
 
 Thanks for watching me
 
-author
+Author
 -------
 
 ZhiFeng Hu [netroby]

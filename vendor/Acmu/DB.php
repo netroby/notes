@@ -1,7 +1,7 @@
 <?php
 namespace Acmu;
 use PDO;
-class Db
+class DB
 {
     private static $_instance = null;
 

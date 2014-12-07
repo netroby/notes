@@ -6,7 +6,7 @@ if (!isset($_SESSION['admin_user'])) {
     if (isset($_GET['id']) && $_GET['id'] > 0) {
         $id = intval($_GET['id']);
         include '../config/config.php';
-        include '../vendor/Acmu/Db.php';
+        include '../vendor/Acmu/DB.php';
         $db = Acmu\Db::getInstance($config);
         $mysql_server = null;
         $charset_info = null;

@@ -1,5 +1,5 @@
 <?php
-namespace Acmu;
+namespace com\netroby;
 use PDO;
 class DB
 {

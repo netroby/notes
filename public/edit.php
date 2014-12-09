@@ -11,7 +11,7 @@ if (isset($_GET['act']) && $_GET['act'] == 'save') {
         if (isset($_POST['content']) && isset($_POST['id']) && (intval($_POST['id'])) > 0) {
 
             include '../config/config.php';
-            include '../vendor/Acmu/Db.php';
+            include '../vendor/Acmu/DB.php';
             $db = Acmu\Db::getInstance($config);
             $modifytime = date('Y-m-d H:i:s', time());
             $stmt = $db->prepare('update notes set title=:title,content = :content, modifytime = :modifytime where id =:id;');
@@ -43,7 +43,7 @@ if (isset($_GET['act']) && $_GET['act'] == 'save') {
     if (isset($_GET['id'])) {
 
         include '../config/config.php';
-        include '../vendor/Acmu/Db.php';
+        include '../vendor/Acmu/DB.php';
         $db = Acmu\Db::getInstance($config);
         $stmt = $db->prepare('SELECT * FROM notes WHERE id = :id;');
         $id = $_GET['id'];

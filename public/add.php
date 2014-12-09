@@ -11,7 +11,7 @@ if (isset($_GET['act']) && $_GET['act'] == 'save') {
         if (isset($_POST['content'])) {
 
             include '../config/config.php';
-            include '../vendor/Acmu/Db.php';
+            include '../vendor/Acmu/DB.php';
             $db = Acmu\Db::getInstance($config);
             $mysql_server = null;
             $charset_info = null;

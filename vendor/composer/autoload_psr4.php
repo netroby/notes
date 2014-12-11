@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'com\\netroby\\' => array($vendorDir . '/com/netroby'),
+    'com\\netroby\\notes\\' => array($baseDir . '/src/com/netroby/notes'),
 );

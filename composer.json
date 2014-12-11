@@ -4,7 +4,7 @@
     },
     "autoload": {
       "psr-4" : {
-        "com\\netroby\\": "vendor/com/netroby"
+        "com\\netroby\\notes\\": "src/com/netroby/notes"
       }
     }
 }

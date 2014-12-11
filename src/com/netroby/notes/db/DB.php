@@ -1,5 +1,5 @@
 <?php
-namespace com\netroby;
+namespace com\netroby\notes\db;
 use PDO;
 class DB
 {

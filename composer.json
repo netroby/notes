@@ -4,6 +4,10 @@
         "ezyang/htmlpurifier":"dev-master"
     },
     "autoload": {
+      "psr-0": {
+        "" : "vendor/ezyang/htmlpurifier/library",
+        "files": ["library/HTMLPurifier.composer.php"]
+      },
       "psr-4" : {
         "com\\netroby\\notes\\": "src/com/netroby/notes"
       }

@@ -3,6 +3,6 @@ namespace com\netroby\notes\routes;
 
 class DefaultRoute {
     public static $routes = [
-      "/" => "index@com\\netroby\\controller\\DefaultController"
+      "/" => "index@com\\netroby\\controller\\HomeController"
     ];
 }

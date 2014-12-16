@@ -19,6 +19,10 @@ class Bootstrap
 
     public static function execute($route)
     {
-
+        list($action, $controller) = explode("@", $route);
+        if (class_exists($controller)) {
+            $c  = new \ReflectionClass($controller);
+            $c->getMethod($action)->invoke(null);
+        }
     }
 }

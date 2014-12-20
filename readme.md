@@ -26,6 +26,22 @@ Install
 4. have fun
 
 
+
+Following is the install scripts i used.
+
+```
+ docker run --name="notes_web" -t -i -p 80:80 -v /home/netroby/data/notes/www:/www -v /home/netroby/data/notes/mysql_data:/mysql_data netroby/fnmp /bin/bash
+
+mkdir /www/notes
+cd /www/notes
+curl -O -L https://github.com/netroby/notes/archive/master.zip
+unzip master.zip
+cd notes-master
+curl -O -L https://getcomposer.org/composer.phar
+php composer.phar update --prefer-dist
+cp config/config.php.dist config/config.php
+```
+
 Requirement
 -----------
 

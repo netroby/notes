@@ -22,7 +22,9 @@ class Bootstrap
         list($action, $controller) = explode("@", $route);
         if (class_exists($controller)) {
             $c  = new \ReflectionClass($controller);
-            $c->getMethod($action)->invoke(null);
+            $instance = $c->newInstance();
+            $a = $c->getMethod($action);
+            $a->invoke($instance);
         }
     }
 }

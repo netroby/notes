@@ -1,9 +1,11 @@
 <?php
 namespace com\netroby\notes\controller;
 
-class HomeController {
+class LogoutController
+{
     public function index() {
-       echo 'home:index';
-        return false;
+        echo 'logout:index';
+        
     }
+    
 }

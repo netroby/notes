@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `note_acmu` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `note_acmu`;
+CREATE DATABASE  IF NOT EXISTS `notes` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `notes`;
 -- MySQL dump 10.13  Distrib 5.6.13, for osx10.6 (i386)
 --
 -- Host: localhost    Database: note_acmu

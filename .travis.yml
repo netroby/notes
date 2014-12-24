@@ -6,4 +6,4 @@ php:
   
 script: 
   - composer install --prefer-dist
-  - phpunit phpunit.xml
+  - phpunit tests

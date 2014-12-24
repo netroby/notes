@@ -3,6 +3,8 @@ class HelloWorldTest extends PHPUnit_Framework_TestCase
 {
     public function testHelloWorld()
     {
-        $this->assertNotEmpty(phpversion());
+        $version = phpversion();
+        echo " The php version is: ".$version;
+        $this->assertNotEmpty($version);
     }
 }

@@ -9,6 +9,7 @@ class LoginController
     }
     public function do_login()
     {
+        session_start();
         include 'config/config.php';
         $gUsername = $gPassword = NULL;
         if (!isset($_POST['username'])) {

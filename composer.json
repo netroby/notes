@@ -1,8 +1,7 @@
 {
     "require": {
         "php": ">=5.3",
-        "ezyang/htmlpurifier":"dev-master",
-        "phpunit/phpunit": "4.4.0"
+        "ezyang/htmlpurifier":"dev-master"
     },
     "autoload": {
       "psr-0": {

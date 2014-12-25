@@ -1,3 +1,4 @@
+sudo: false
 language: php
 
 php:
@@ -6,4 +7,4 @@ php:
   
 script: 
   - composer install --prefer-dist
-  - phpunit tests/*
+  - phpunit tests

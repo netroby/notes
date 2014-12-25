@@ -51,4 +51,22 @@ class LoginController
                 
     }
     
+    public function google() {
+
+    }
+    public function google_callback() {
+
+    }
+    public function facebook() {
+
+    }
+    public function facebook_callback() {
+
+    }
+    public function twitter() {
+
+    }
+    public function twitter_callback() {
+
+    }
 }

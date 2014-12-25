@@ -28,7 +28,7 @@ class LoginController
             $_SESSION['msg'] = 'Login failed';
         } else {
             $_SESSION['admin_user'] = $config['username'];
-            return header('location:/list');
+            return header('location:/');
         }
         return header('location:/login');
     }

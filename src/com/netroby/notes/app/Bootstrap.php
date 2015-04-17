@@ -14,9 +14,9 @@ class Bootstrap
             $paths = explode(" ", trim(str_replace("/", " ", $path)));
             $controller = array_shift($paths);
             if (count($paths)>1) {
-                $action = implode("_", $paths);                
-            } else if (count($paths) > 0) {
-                $action = $paths[0];                
+                $action = implode("_", $paths);
+            } elseif (count($paths) > 0) {
+                $action = $paths[0];
             }
         }
         $action = static::filterVars($action);
@@ -24,7 +24,8 @@ class Bootstrap
         static::execute($action, $controller);
     }
     
-    public static function filterVars($var) {
+    public static function filterVars($var)
+    {
         return preg_replace("/[^a-zA-Z0-9_]/", "", $var);
     }
 

@@ -7,11 +7,11 @@ class LoginController
     {
         include 'template/login.html';
     }
-    public function do_login()
+    public function doLogin()
     {
         session_start();
         include 'config/config.php';
-        $gUsername = $gPassword = NULL;
+        $gUsername = $gPassword = '';
         if (!isset($_POST['username'])) {
             $_SESSION['msg'] = 'Username not provided';
             return header('location:/login');
@@ -32,41 +32,47 @@ class LoginController
         }
         return header('location:/login');
     }
-    public function qq() 
+    public function qq()
     {
-        echo 'login:qq';      
+        echo 'login:qq';
         
     }
-    public function qq_callback()
+    public function qqCallback()
     {
-        echo 'login:qq_callback';        
+        echo 'login:qq_callback';
     }
     public function weibo()
     {
-        echo 'login:weibo';        
+        echo 'login:weibo';
         
     }
-    public function weibo_callback()
+    public function weiboCallback()
     {
                 
     }
     
-    public function google() {
+    public function google()
+    {
 
     }
-    public function google_callback() {
+    public function googleCallback()
+    {
 
     }
-    public function facebook() {
+    public function facebook()
+    {
 
     }
-    public function facebook_callback() {
+    public function facebookCallback()
+    {
 
     }
-    public function twitter() {
+    public function twitter()
+    {
 
     }
-    public function twitter_callback() {
+    public function twitterCallback()
+    {
 
     }
 }

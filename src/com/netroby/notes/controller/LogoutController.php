@@ -3,7 +3,8 @@ namespace com\netroby\notes\controller;
 
 class LogoutController
 {
-    public function index() {
+    public function index()
+    {
         echo 'logout:index';
         
     }

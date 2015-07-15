@@ -4,6 +4,13 @@ notes webapps with MySQL and PHP
 
 ![Preview1](http://netroby.github.io/notes/public/static/images/preview1.png "Preview1")
 
+
+## Requirement 
+
+1. PHP 5.6+ (PDO_MySQL, CURL with OpenSSL, MbString, MCrypt)
+2. MySQL 5.6+
+3. nginx 1.6+ (Tengine may be ok)
+
 ## Install 
 
 1. import the sql file using phpmyadmin or mysql client
@@ -40,11 +47,6 @@ php composer.phar update --prefer-dist
 cp config/config.php.dist config/config.php
 ```
 
-## Requirement 
-
-1. PHP 5.6+ (PDO_MySQL, CURL with OpenSSL, MbString, MCrypt)
-2. MySQL 5.6+
-3. nginx 1.6+ (Tengine may be ok)
 
 ## License 
 

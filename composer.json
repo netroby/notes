@@ -1,15 +1,12 @@
 {
     "require": {
-        "php": ">=5.3",
-        "ezyang/htmlpurifier":"dev-master"
+        "ezyang/htmlpurifier":"dev-master",
+        "zendframework/zendframework":"dev-master"
     },
     "autoload": {
       "psr-0": {
         "" : "vendor/ezyang/htmlpurifier/library",
         "files": ["library/HTMLPurifier.composer.php"]
-      },
-      "psr-4" : {
-        "com\\netroby\\notes\\": "src/com/netroby/notes"
       }
     }
 }

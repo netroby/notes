@@ -1,5 +1,5 @@
 <?php
-namespace com\netroby\notes\app;
+namespace notes\app;
 
 class Bootstrap
 {

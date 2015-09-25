@@ -1,5 +1,5 @@
 <?php
-namespace com\netroby\notes\controller;
+namespace notes\controller;
 
 class HomeController
 {

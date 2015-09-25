@@ -6,9 +6,12 @@
 
     },
     "autoload": {
-      "psr-0": {
-        "" : "vendor/ezyang/htmlpurifier/library",
-        "files": ["library/HTMLPurifier.composer.php"]
-      }
+        "psr-0": {
+            "" : "vendor/ezyang/htmlpurifier/library",
+            "files": ["library/HTMLPurifier.composer.php"]
+        },
+        "psr-4": {
+            "note\\": "src/"
+        }
     }
 }

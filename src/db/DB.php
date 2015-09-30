@@ -1,11 +1,12 @@
 <?php
 namespace notes\db;
 use PDO;
+
 class DB
 {
     private static $instance;
 
-    private function __construct()
+    protected function __construct()
     {
     }
 
@@ -13,11 +14,11 @@ class DB
     {
         if (null === static::$instance) {
             $mysql_server = sprintf(
-                "mysql:host=%s;dbname=%s",
+                'mysql:host=%s;dbname=%s',
                 $config['db']['host'],
                 $config['db']['dbname']
             );
-            $charset_info = sprintf("SET NAMES %s", $config['db']['charset']);
+            $charset_info = sprintf('SET NAMES %s', $config['db']['charset']);
             static::$instance = new PDO(
                 $mysql_server,
                 $config['db']['user'],

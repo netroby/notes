@@ -1,17 +1,32 @@
 {
+    "name": "laravel/lumen",
+    "description": "The Laravel Lumen Framework.",
+    "keywords": ["framework", "laravel", "lumen"],
+    "license": "MIT",
+    "type": "project",
     "require": {
-        "ezyang/htmlpurifier":"dev-master",
-        "zendframework/zendframework":"dev-master",
-        "netroby/notes-utils":"dev-master"
-
+        "php": ">=5.5.9",
+        "laravel/lumen-framework": "5.1.*",
+        "vlucas/phpdotenv": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "fzaninotto/faker": "~1.0"
     },
     "autoload": {
-        "psr-0": {
-            "" : "vendor/ezyang/htmlpurifier/library",
-            "files": ["library/HTMLPurifier.composer.php"]
-        },
         "psr-4": {
-            "note\\": "src/"
-        }
+            "App\\": "app/"
+        },
+        "classmap": [
+            "database/"
+        ]
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
     }
 }

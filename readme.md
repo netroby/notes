@@ -1,80 +1,21 @@
-notes webapps with MySQL and PHP
+## Lumen PHP Framework
 
-## Preview 
+[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
+[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
 
-![Preview1](http://netroby.github.io/notes/public/static/images/preview1.png "Preview1")
+Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
 
+## Official Documentation
 
-## Requirement 
+Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
 
-1. PHP 5.6+ (PDO_MySQL, CURL with OpenSSL, MbString, MCrypt)
-2. MySQL 5.6+
-3. nginx 1.6+ (Tengine may be ok)
+## Security Vulnerabilities
 
-## Install 
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
-1. import the sql file using phpmyadmin or mysql client
+### License
 
-
-    using mysql client connect to your mysql server , import the notes.sql
-
-
-2. rename config/config.php.dist to config/config.php
-
-
-   then change the value of the configure sections.
-
-
-3. configure the webserver to serv the notes software, you may reference `install/notes.conf`
-
-
-4. have fun
-
-
-
-Following is the install scripts i used.
-
-```
- docker run --name="notes_web" -t -i -p 80:80 -v /home/netroby/data/notes/www:/www -v /home/netroby/data/notes/mysql_data:/mysql_data netroby/fnmp /bin/bash
-
-mkdir /www/notes
-cd /www/notes
-curl -O -L https://github.com/netroby/notes/archive/master.zip
-unzip master.zip
-cd notes-master
-curl -O -L https://getcomposer.org/composer.phar
-php composer.phar update --prefer-dist
-cp config/config.php.dist config/config.php
-```
-
-
-## License 
-
-This software was released under MIT license, totally free and opensource.
-
-Welcome you join us to improve the quality of this software.
-
-see license information please read [LICENSE](LICENSE)
-
-
-## Goals 
-
-we want to be free from locked by evernote, youdao note.
-
-the big company will locked us, no easy migrating from one to the other.
-
-so i made this software, we need free control our knowledge and our memory.
-
-hope this software will help you all.
-
-Thanks for watching me
-
-## Author 
-
-ZhiFeng Hu [netroby]
-
-## FAQ
-
-* Why $_POST empty
-
-> You should check your php and your nginx, they must be the same user and group.
+The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)

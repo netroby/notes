@@ -9,11 +9,11 @@ class AccountController extends BaseController
 {
     public function login()
     {
-        include '../template/login.html';
         if (isset($_SESSION['msg'])) {
             $_SESSION['msg'] = NULL;
             unset($_SESSION['msg']);
         }
+        return view('admin.account.login');
     }
     public function doLogin()
     {

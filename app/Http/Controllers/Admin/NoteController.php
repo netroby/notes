@@ -10,7 +10,6 @@ class NoteController extends BaseController
     public function add()
     {
         if (isset($_GET['act']) && $_GET['act'] == 'save') {
-
             try {
                 if (isset($_POST['content'])) {
 

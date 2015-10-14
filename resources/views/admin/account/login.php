@@ -13,7 +13,7 @@
     <h1>Notes</h1>
     <p>every things worth memory</p>
     <div>
-        <form action="/login/do/login" method="POST" class="form-horizontal">
+        <form action="/login/dologin" method="POST" class="form-horizontal">
             <table>
                 <tr>
                     <td>Username:</td>
@@ -30,9 +30,11 @@
             </table>
         </form>
 
-        <?php if (isset($_SESSION['msg'])) { ?>
-        <div class="alert alert-danger"><?php echo htmlspecialchars(strip_tags($_SESSION['msg'])); ?></div>
-        <?php } ?>
+        <?php
+        if (array_key_exists('msg', $_SESSION)) : ?>
+        <div class="alert alert-danger"><?=htmlspecialchars(strip_tags($_SESSION['msg'])); ?></div>
+        <?php
+        endif; ?>
     </div>
 </div>
 </body>

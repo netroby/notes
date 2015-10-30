@@ -70,9 +70,10 @@ hope this software will help you all.
 Thanks for watching me
 
 
+
 ## Donate me please
 
-![Scan QRCode donate me via Alipay](https://www.netroby.com/images/alipayme.jpg)
+![Scan QRCode donate me via Alipay](https://www.netroby.com/assets/images/alipayme.jpg)
 
 **Scan QRCode donate me via Alipay**
 

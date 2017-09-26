@@ -1,9 +1,14 @@
 package main
 
 import (
-	"fmt"
+	"log"
+
+	"github.com/gobuffalo/envy"
+	"github.com/netroby/note-go/actions"
 )
 
 func main() {
-	fmt.Println("hello world")
+	port := envy.Get("PORT", "3000")
+	app := actions.App()
+	log.Fatal(app.Start(port))
 }

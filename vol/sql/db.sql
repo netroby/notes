@@ -1,0 +1,19 @@
+BEGIN TRANSACTION;
+CREATE TABLE `tags` (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`name`	TEXT
+);
+CREATE TABLE `notes` (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`title`	TEXT,
+	`content`	TEXT,
+	`addtime`	INTEGER,
+	`modifytime`	INTEGER,
+	`is_delete`	INTEGER
+);
+CREATE TABLE `note_ref_tag` (
+	`id`	INTEGER PRIMARY KEY AUTOINCREMENT,
+	`nid`	INTEGER,
+	`tid`	INTEGER
+);
+COMMIT;

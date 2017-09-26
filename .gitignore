@@ -1,6 +1,12 @@
-config/config.php
-vendor/*
-*.lock
+vendor/
+**/*.log
+**/*.sqlite
 .idea/
-*.iml
-*.log
+bin/
+tmp/
+node_modules/
+.sass-cache/
+*-packr.go
+public/assets/
+note-go
+.vscode/

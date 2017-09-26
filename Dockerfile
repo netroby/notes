@@ -2,8 +2,8 @@
 # https://docs.docker.com/engine/userguide/eng-image/multistage-build/
 FROM gobuffalo/buffalo:v0.9.4 as builder
 
-RUN mkdir -p $GOPATH/src/github.com/netroby/note-go
-WORKDIR $GOPATH/src/github.com/netroby/note-go
+RUN mkdir -p $GOPATH/src/github.com/netroby/notes
+WORKDIR $GOPATH/src/github.com/netroby/notes
 
 # this will cache the npm install step, unless package.json changes
 ADD package.json .

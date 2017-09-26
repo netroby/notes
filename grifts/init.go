@@ -2,7 +2,7 @@ package grifts
 
 import (
 	"github.com/gobuffalo/buffalo"
-	"github.com/netroby/note-go/actions"
+	"github.com/netroby/notes/actions"
 )
 
 func init() {

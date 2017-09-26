@@ -1,11 +1,11 @@
 development:
   dialect: "sqlite3"
-  database: /home/huzhifeng/go/src/github.com/netroby/note-go/note-go_development.sqlite
+  database: /home/huzhifeng/go/src/github.com/netroby/notes/note-go_development.sqlite
 
 test:
   dialect: "sqlite3"
-  database: /home/huzhifeng/go/src/github.com/netroby/note-go/note-go_test.sqlite
+  database: /home/huzhifeng/go/src/github.com/netroby/notes/note-go_test.sqlite
 
 production:
   dialect: "sqlite3"
-  database: /home/huzhifeng/go/src/github.com/netroby/note-go/note-go_production.sqlite
+  database: /home/huzhifeng/go/src/github.com/netroby/notes/note-go_production.sqlite

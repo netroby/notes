@@ -4,7 +4,7 @@ import (
 	"log"
 
 	"github.com/gobuffalo/envy"
-	"github.com/netroby/note-go/actions"
+	"github.com/netroby/notes/actions"
 )
 
 func main() {

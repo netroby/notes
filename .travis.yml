@@ -1,11 +1,13 @@
-sudo: false
-language: php
+language: go
 
-php:
-  - "5.6"
-  - "5.5"
-  
-script: 
-  - composer self-update
-  - composer install --prefer-dist
-  - phpunit tests
+go:
+    - 1.9
+    - 1.8
+
+install:
+    - go get -u github.com/golang/dep/cmd/dep
+
+script:
+    - dep ensure -v
+    - go build -buildmode=pie -v 
+    - ls -l
